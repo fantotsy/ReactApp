@@ -10,6 +10,7 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = {
     onAddTodoClick: TODOS_ACTIONS.addTodo,
+    onRemoveTodoClick: TODOS_ACTIONS.removeTodo,
     onNewTodoInputChange: TODOS_ACTIONS.setTodoInputValue,
 };
 

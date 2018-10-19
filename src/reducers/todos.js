@@ -18,6 +18,18 @@ export default (state = initialState, action) => {
                 ],
                 inputValue: '',
             };
+        case TODOS_TYPES.REMOVE_TODO:
+            for(let i = 0; i < state.data.length; i++){
+               if (state.data[i].id === action.id) {
+                 state.data.splice(i, 1);
+               }
+            }
+            return {
+                ...state,
+                data: [
+                    ...state.data
+                ],
+            };
         case TODOS_TYPES.SET_TODO_INPUT_VALUE:
             return {
                 ...state,

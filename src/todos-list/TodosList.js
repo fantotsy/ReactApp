@@ -4,7 +4,7 @@ export default class TodosList extends React.Component {
     renderTodo = (todo) => (
         <li key={todo.id}>
             {todo.text}
-            <button onClick={this.props.onRemoveTodoClick(todo.id)}>X</button>
+            <button onClick={() => { this.props.onRemoveTodoClick(todo.id)}}>X</button>
         </li>
     );
 
